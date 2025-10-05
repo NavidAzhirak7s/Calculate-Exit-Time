@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculate Exit Time</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap&subset=arabic" rel="stylesheet" />
+  <div class="container">
+    <h2>محاسبه زمان خروج</h2>
+    <div class="form-group">
+      <label for="entryTime">ساعت ورود</label>
+      <div class="input-with-icon">
+        <input id="entryTime" type="time" min="00:00" max="23:59" value="09:00" aria-label="ساعت ورود" />
+      </div>
+      <div id="entryWarning" class="warning" aria-live="polite"></div>
+    </div>
+    <div class="form-group">
+      <label>مدت حضور</label>
+      <div class="custom-select" id="presenceSelect" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
+        <button type="button" class="select-toggle" aria-label="مدت حضور">
+          <span class="placeholder">مدت حضور را انتخاب کنید</span>
+        </button>
+        <ul class="options" role="listbox" aria-hidden="true">
+          <li role="option" data-value="8">8 ساعت</li>
+          <li role="option" data-value="8.45">8:45 ساعت</li>
+        </ul>
+        <input type="hidden" id="presenceTime" name="presenceTime" />
+      </div>
+    </div>
+    <button id="calculateBtn">محاسبه</button>
+    <div id="result" role="status" aria-live="polite"></div>
+    <div id="extraNote" class="note" aria-live="polite"></div>
+  </div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
